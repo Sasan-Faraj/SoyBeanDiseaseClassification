@@ -270,7 +270,7 @@ df.head()
 
 ---------
 # Null Values 
-
+This section should be considered one of the more important ones because even small numbers of null values can create large biases within the data. Likewise, it is impractical to simply remove rows with null values here because we would lose an entire class and many rows out of this already small dataset.
 
 ```python
 null_list = df.iloc[:,1:].isnull().sum().sort_values(ascending=False)[:(int(.3*len(df.columns)))]
